@@ -34,10 +34,10 @@ public class TransferPage {
     }
 
     public void errorLimit() {
-        $(".notification__content").should(Condition.exactText("Ошибка"));
+        $(errorMessage).should(Condition.exactText("Выполнена попытка перевода суммы, превышающей остаток на карте списания"));
     }
 
     public void invalidCard() {
-        $(".notification__content").should(Condition.text("Ошибка! Произошла ошибка"));
+        $(errorMessage).should(Condition.text("Ошибка! Перевод на одну и ту же карту невозможен"));
     }
 }
